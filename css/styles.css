@@ -5,7 +5,9 @@
 /* Ovenstående kode kan give problemer ved nogle 3. parts scripts man henter. Men det gør det nemmere at forstå og lave kodning når man starter. */
 
 body {
-    margin: 0; /* Ingen kanter i siden af browser */
+    margin: 0 auto; /* Ingen kanter i siden af browser */
+    display: flex;
+    font-family: 'Roboto', sans-serif, 'Noto Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,4 +35,56 @@ img {
     display: block; /* Billeder er et element (laver linjeskift) */
     max-width: 100%; /* Bredde må maks fylde 100% */
     height: auto; /* Højden skal tilpasse sig */
+}
+
+div {
+    text-align: center;
+    padding: 100px;
+    background: lightblue;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    color: lightpink;
+    font-size: 22px;
+    letter-spacing: 4px;
+
+}
+
+div:hover{
+    border: 1px dotted white;
+    width: 600px;
+    height: 600px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.transition {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.slides {
+    position: relative;
+    background: lightgrey;
+    animation-duration: 7s;
+    margin: 0 auto;
+
+    box-shadow: 1px 2px 10px 5px white;
+
+    animation: slider 9s infinite linear;
+}
+
+@keyframes slider {
+    0% {background-color: lightpink; left: 0px; top: 0px; width: 400px; height: 400px;}
+
+    25% {background-color: lightcoral; left: 300px; top: 0px; width: 500px; height: 500px;}
+
+    50% {background-color: hotpink; left: 300px; top: 300px; width: 600px; height: 600px;}
+
+    75% {background-color: deeppink; left: 0px; top: 300px; width: 700px; height: 500px;}
+
+    100% {background-color: whitesmoke; left: 0px; top: 0px; width: 500px; height: 700px;}
 }
